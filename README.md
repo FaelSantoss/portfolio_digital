@@ -1,5 +1,5 @@
 <h1 align="center">Portfólio digital de Rafael dos Santos</h1>
-<h2 align="center">baaaaoaaaaai Fabrício Galende Marques de Carvalho</h2>
+<h2 align="center">Orientador: Fabrício Galende Marques de Carvalho</h2>
 
 <p align="center">
   <img src="./mgt/imagem.jpeg" width="50%" alt="Texto Alternativo">
