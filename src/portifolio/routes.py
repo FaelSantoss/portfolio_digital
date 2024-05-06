@@ -5,3 +5,5 @@ from portifolio import app
 @app.route("/", methods=["GET", "POST"])
 def homepage():
     return render_template("index.html")
+
+from portifolio import routes

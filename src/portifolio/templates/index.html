@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Início | Portfolio</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+        <link href="{{ url_for('static', filename='styles/output.css') }}" rel="stylesheet">
+    </head>
+    <body>
+
+        <header class="navbar">
+            <div class="container">
+                <img src="{{ url_for('static', filename='logo.jpeg') }}" class="logo">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="/">Início</a></li>
+                        <li><a href="/projects">Projetos</a></li>
+                        <li><a href="/about">Sobre mim</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <h1 class="text-3xl bounderline font-bold">
+            Hello world!
+          </h1>
+        <script src="script.js"></script>
+    </body>
+</html>

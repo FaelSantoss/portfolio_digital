@@ -1,0 +1,16 @@
+{
+  "name": "portfolio_digital",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Portfólio digital de Rafael dos Santos</h1> <h2 align=\"center\">Orientador: Fabrício Galende Marques de Carvalho</h2>",
+  "main": "index.js",
+  "scripts": {
+    "dev:app": "flask --app ./src/main.py run --debug -p 5002 --host 0.0.0.0",
+    "dev:style": "tailwindcss -i ./src/ui/static/styles/global.css -o ./src/ui/static/build/styles/global.css --watch",
+    "dev": "concurrently 'npm run dev:app' 'npm run dev:style'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwind": "^4.0.0"
+  }
+}
