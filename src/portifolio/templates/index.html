@@ -2,12 +2,16 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+        {% block title %}
         <title>Início | Portfolio</title>
+        {% endblock %}
+        {% block css %}
         <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
         <link href="{{ url_for('static', filename='styles/output.css') }}" rel="stylesheet">
+        {% endblock %}
     </head>
     <body>
-
+        {% block navbar %}
         <header class="navbar">
             <div class="container">
                 <img src="{{ url_for('static', filename='logo.jpeg') }}" class="logo">
@@ -20,10 +24,11 @@
                 </nav>
             </div>
         </header>
-
+        {% endblock %}
+        {% block body %}
         <h1 class="text-3xl bounderline font-bold">
             Hello world!
-          </h1>
-        <script src="script.js"></script>
+        </h1>
+        {% endblock %}
     </body>
 </html>
