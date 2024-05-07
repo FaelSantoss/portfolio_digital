@@ -9,7 +9,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .logo {
@@ -23,6 +23,6 @@ html {
 }
 
 .menu ul li a {
-    color: #333;
+    color: #f7f9f9;
     text-decoration: none;
 }

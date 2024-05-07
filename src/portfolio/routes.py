@@ -1,5 +1,5 @@
 from flask import render_template
-from portifolio import app
+from portfolio import app
 
 
 @app.route("/", methods=["GET"])

@@ -10,16 +10,16 @@
         <link href="{{ url_for('static', filename='styles/output.css') }}" rel="stylesheet">
         {% endblock %}
     </head>
-    <body>
+    <body class="bg-gray-50">
         {% block navbar %}
-        <header class="navbar">
+        <header class="navbar bg-blue-900 drop-shadow-xl">
             <div class="container">
                 <img src="{{ url_for('static', filename='logo.jpeg') }}" class="logo">
                 <nav class="menu">
                     <ul>
-                        <li><a href="/">Início</a></li>
-                        <li><a href="/projects">Projetos</a></li>
-                        <li><a href="/about">Sobre mim</a></li>
+                        <li><a href="/" class="hover:underline transition duration-200 ease-in-out">Início</a></li>
+                        <li><a href="/projects" class="hover:underline transition duration-200 ease-in-out">Projetos</a></li>
+                        <li><a href="/about" class="hover:underline transition duration-200 ease-in-out">Sobre mim</a></li>
                     </ul>
                 </nav>
             </div>
