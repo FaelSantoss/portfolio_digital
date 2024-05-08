@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev:app": "flask --app ./src/main.py run --debug -p 5001 --host 0.0.0.0",
-    "dev:style": "npx tailwindcss -i ./src/portifolio/static/styles/input.css -o ./src/portifolio/static/styles/output.css --watch",
+    "dev:style": "npx tailwindcss -i ./src/portfolio/static/styles/input.css -o ./src/portfolio/static/styles/output.css --watch",
     "dev": "concurrently 'npm run dev:app' 'npm run dev:style'"
   },
   "author": "",
