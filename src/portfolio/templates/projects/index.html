@@ -3,3 +3,21 @@
 {% block title %}
 <title>Projetos | Portfolio</title>
 {% endblock%}
+
+{% block body %}
+<div class="flex items-start justify-center p-6">
+    <h1 class="text-7xl text-left ml-[-15%] text-blue-950 p-6">Projetos</h1>
+</div>
+    <div class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto my-10">
+        <h2 class="text-2xl font-bold mb-4 text-blue-950">Projetos Academicos</h2>
+        <p class="text-blue-950 mb-2">Aqui estão alguns dos meus projetos academicos.</p>
+        <a href="/projects/academic" class="text-blue-950">Ver Mais</a>
+      </div>
+
+    <div class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto my-10">
+        <h2 class="text-2xl font-bold mb-4 text-blue-950">Projetos Pessoais</h2>
+        <p class="text-blue-950 mb-2">Aqui estão alguns dos meus projetos pessoais.</p>
+        <a href="/projects/personal" class="text-blue-950">Ver Mais</a>
+    </div>
+
+{% endblock%}
