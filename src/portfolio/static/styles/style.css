@@ -26,3 +26,7 @@ html {
     color: #f7f9f9;
     text-decoration: none;
 }
+
+.word-break-all {
+  word-break: break-all;
+}
