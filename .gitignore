@@ -1,4 +1,3 @@
 .venv
 node_modules
-src/portfolio/static/styles/output.css
- 
+src/ui/static/styles/output.css

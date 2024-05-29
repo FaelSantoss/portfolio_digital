@@ -4,8 +4,8 @@
   "description": "<h1 align=\"center\">Portfólio digital de Rafael dos Santos</h1> <h2 align=\"center\">Orientador: Fabrício Galende Marques de Carvalho</h2>",
   "main": "index.js",
   "scripts": {
-    "dev:app": "flask --app ./src/main.py run --debug -p 5003 --host 0.0.0.0",
-    "dev:style": "npx tailwindcss -i ./src/portfolio/static/styles/input.css -o ./src/portfolio/static/styles/output.css --watch",
+    "dev:app": "flask --app ./src/app/main.py run --debug -p 5000 --host 0.0.0.0",
+    "dev:style": "npx tailwindcss -i ./src/ui/static/styles/input.css -o ./src/ui/static/styles/output.css --watch",
     "dev": "concurrently 'npm run dev:app' 'npm run dev:style'"
   },
   "author": "",
