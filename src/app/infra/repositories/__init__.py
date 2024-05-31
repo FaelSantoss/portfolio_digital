@@ -1,0 +1,3 @@
+from .personal_projects_repository import PersonalProjectsRepository
+
+personal_projects_repository = PersonalProjectsRepository()
