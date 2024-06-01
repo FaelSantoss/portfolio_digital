@@ -6,3 +6,4 @@ class AcademicProject(Entity):
     title: str = None
     content: str = None
     technologies: str = None
+    link: str = None
