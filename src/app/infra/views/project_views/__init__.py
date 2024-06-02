@@ -2,6 +2,7 @@ from flask import Blueprint, render_template
 
 projects_views = Blueprint("projects_views", __name__)
 
+from .personal_projects_view import personal_projects_view
 
 @projects_views.route("/", methods=["GET"])
 def homepage():
@@ -25,4 +26,4 @@ def academic_projects():
 
 @projects_views.route("/projects/personal", methods=["GET"])
 def personal_projects():
-    return render_template("projects/personal_projects.html")
+    return personal_projects_view()

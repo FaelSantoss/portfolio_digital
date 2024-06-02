@@ -12,7 +12,7 @@ class MySQL:
             "user": getenv("MYSQL_DATABASE_USER"),
             "password": getenv("MYSQL_DATABASE_PASSWORD"),
             "database": getenv("MYSQL_DATABASE_NAME"),
-            "host": getenv("MYSQL_DATABASE_HOST"),
+            "host": "localhost",
             "raise_on_warnings": True,
         }
 
