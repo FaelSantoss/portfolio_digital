@@ -2,48 +2,38 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    {% block title %}
-    <title>Início | Portfolio</title>
-    {% endblock %}
-    {% block css %}
-    <link rel="stylesheet"
-      href="{{ url_for('static',filename='styles/style.css') }}">
-    <link href="{{ url_for('static', filename='styles/output.css') }}"
-      rel="stylesheet">
-    {% endblock %}
-  </head>
-  {% block navbar %}
-  {{Header.Header(url)}}
+
+<head>
+  <meta charset="UTF-8" />
+  {% block title %}
+  <title>Início | Portfolio</title>
+  {% endblock %} {% block css %}
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}" />
+  <link href="{{ url_for('static', filename='styles/output.css') }}" rel="stylesheet" />
   {% endblock %}
-  <body class="bg-gray-900 overflow-hidden">
+</head>
+
+<body class="bg-gray-900 overflow-hidden">
+  <div>{{Header.Header(url)}}</div>
   {% block body %}
-    <div class="flex justify-center items-start min-h-screen w-full">
+    <div class="flex justify-center items-start min-h-screen w-full animate-fadeIn">
       <div class="md:w-7/12">
-        <div
-          class="flex flex-col items-start md:flex-row min-h-screen">
+        <div class="flex flex-col items-start md:flex-row min-h-screen animate-fadeIn">
           <div class="w-full md:w-1/2 mt-24">
-            <h1 class="text-yellow-500 text-2xl font-bold w-full">OLÁ</h1>
-            <p
-              class="text-yellow-500 text-7xl md:text-8xl font-bold w-full">Eu
-              sou</p>
-            <p
-              class="text-gray-100 text-7xl md:text-8xl font-bold w-full">Rafael</p>
-            <p
-              class="text-gray-100 text-7xl md:text-8xl font-bold w-full">dos
-              Santos</p>
-            <p
-              class="text-yellow-500 text-4xl font-semibold w-full">Desenvolvedor
-              FullStack</p>
+            <h1 class="text-yellow-500 text-2xl font-bold w-full ease-linear">OLÁ</h1>
+            <p class="text-yellow-500 text-7xl md:text-8xl font-bold w-full">Eu sou</p>
+            <p class="text-gray-100 text-7xl md:text-8xl font-bold w-full">Rafael</p>
+            <p class="text-gray-100 text-7xl md:text-8xl font-bold w-full">dos Santos</p>
+            <p class="text-yellow-500 text-4xl font-semibold w-full">Desenvolvedor FullStack</p>
           </div>
-          <img src="{{ url_for('static', filename='imgs/logo.png')}}"
-            alt="Imagem"
-            class="w-[65.1%] h-[65.1%] object-cover md:ml-10">
+          <img src="{{ url_for('static', filename='imgs/logo.png')}}" alt="Imagem"
+            class="w-[65.1%] h-[65.1%] object-cover md:ml-10" />
         </div>
       </div>
     </div>
 
-    {% endblock %}
-  </body>
+
+  {% endblock %}
+</body>
+
 </html>
