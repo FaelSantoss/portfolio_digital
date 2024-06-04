@@ -1,0 +1,30 @@
+
+{% macro Header(url)%}
+
+<div class="container">
+    <img src="{{ url_for('static', filename='imgs/logo.png') }}" class="logo rounded-full border-white">
+    <nav class="menu fixed top-0 right-0 p-2">
+        <ul>
+        {% if url == '/' %}
+        
+        <li><a href="/"><p class="px-3 py-1 font-medium border-yellow-500 border-b-4">início</p></li>
+        <li><a href="/projects"><p class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">Projetos</p></li>
+        <li><a href="/about"><p class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">Sobre</p></li>
+        {% endif %}
+        {% if '/projects' in url %}
+        <li><a href="/"><p
+                class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">início</p></li>
+            <li><a href="/projects"><p
+                                    class="px-3 py-1 font-medium border-yellow-500 border-b-4">Projetos</p></li>
+                        <li><a href="/about"><p
+        class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">Sobre</p></li>
+        {% endif %}
+        {% if url == '/about' %}
+        <li><a href="/"><p class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">início</p></li>
+        <li><a href="/projects"><p class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">Projetos</p></li>
+        <li><a href="/about"><p class="px-3 py-1 font-medium border-yellow-500 border-b-4">Sobre</p></li>
+        {% endif %}
+        </ul>
+    </nav>
+</div>
+{%endmacro%}

@@ -1,3 +1,5 @@
+{% import 'components/header.html' as Header %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -6,60 +8,42 @@
     <title>Início | Portfolio</title>
     {% endblock %}
     {% block css %}
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
-    <link href="{{ url_for('static', filename='styles/output.css') }}" rel="stylesheet">
+    <link rel="stylesheet"
+      href="{{ url_for('static',filename='styles/style.css') }}">
+    <link href="{{ url_for('static', filename='styles/output.css') }}"
+      rel="stylesheet">
     {% endblock %}
   </head>
+  {% block navbar %}
+  {{Header.Header(url)}}
+  {% endblock %}
   <body class="bg-gray-900 overflow-hidden">
-    {% block navbar %}
-    <div class="container">
-      <img src="{{ url_for('static', filename='imgs/logo.png') }}" class="logo rounded-full border-white">
-      <nav class="menu fixed top-0 right-0 p-2">
-        <ul>
-            <li><a href="/"><p class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">início</p></li>
-            <li><a href="/projects"><p class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">Projetos</p></li>
-            <li><a href="/about"><p class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">Sobre</p></li>
-        </ul>                    
-      </nav>
-    </div>
-    {% endblock %}
-    {% block body %}
+  {% block body %}
     <div class="flex justify-center items-start min-h-screen w-full">
-      <div class="w-full md:w-7/12">
-          <div class="flex flex-col items-start md:flex-row justify-between min-h-screen">
-            <div class="w-full md:w-1/2 mt-24">
-              <h1 class="text-yellow-500 text-2xl font-bold w-full">OLÁ</h1>
-              <p class="text-yellow-500 text-7xl md:text-8xl font-bold w-full">Eu sou</p>
-              <p class="text-gray-100 text-7xl md:text-8xl font-bold w-full">Rafael</p>
-              <p class="text-gray-100 text-7xl md:text-8xl font-bold w-full">dos Santos</p>
-              <p class="text-yellow-500 text-4xl font-semibold w-full">Desenvolvedor FullStack</p>
-            </div>
-            <img src="{{ url_for('static', filename='imgs/logo.png')}}" alt="Imagem" class="w-[65.1%] h-[65.1%] object-cover md:ml-10">
-            </div>
+      <div class="md:w-7/12">
+        <div
+          class="flex flex-col items-start md:flex-row min-h-screen">
+          <div class="w-full md:w-1/2 mt-24">
+            <h1 class="text-yellow-500 text-2xl font-bold w-full">OLÁ</h1>
+            <p
+              class="text-yellow-500 text-7xl md:text-8xl font-bold w-full">Eu
+              sou</p>
+            <p
+              class="text-gray-100 text-7xl md:text-8xl font-bold w-full">Rafael</p>
+            <p
+              class="text-gray-100 text-7xl md:text-8xl font-bold w-full">dos
+              Santos</p>
+            <p
+              class="text-yellow-500 text-4xl font-semibold w-full">Desenvolvedor
+              FullStack</p>
+          </div>
+          <img src="{{ url_for('static', filename='imgs/logo.png')}}"
+            alt="Imagem"
+            class="w-[65.1%] h-[65.1%] object-cover md:ml-10">
         </div>
       </div>
-              
-  {% endblock %}
+    </div>
+
+    {% endblock %}
   </body>
 </html>
-              
-        
-        
-        <!-- <div class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto my-10">
-            <h2 class="text-2xl font-bold mb-4 text-blue-950">Perfil
-                Pessoal</h2>
-            <p class="text-blue-950">Estudante dedicado e entusiasta
-                de programação, estou buscando
-                uma oportunidade para iniciar
-                minha carreira na área. Possuo
-                sólidos conhecimentos teóricos
-                adquiridos por meio de cursos e
-                estudos independentes, e estou
-                ansioso para aplicar minhas
-                habilidades em um ambiente
-                profissional. Sou motivado,
-                autodidata e apaixonado por
-                resolver problemas complexos
-                por meio de soluções criativas de
-                programação.</p>
-        </div> -->
