@@ -14,10 +14,10 @@
   {% endblock %}
 </head>
 
-<body class="bg-gray-900">
-  <div>{{Header.Header(url)}}</div>
-  {% block body %}
-    <div class="flex justify-center items-start min-h-screen w-full animate-fadeIn">
+<div>{{Header.Header(url)}}</div>
+{% block body %}
+  <body class="bg-gradient-to-r from-slate-950 via-slate-800 to-slate-950">
+    <div class="flex justify-center items-start min-h-screen w-full animate-fadeIn mt-8">
       <div class="md:w-7/12">
         <div class="flex flex-col items-start md:flex-row min-h-screen animate-fadeIn">
           <div class="w-full md:w-1/2 mt-24">
@@ -34,7 +34,7 @@
     </div>
 
 
+    </body>
   {% endblock %}
-</body>
 
 </html>

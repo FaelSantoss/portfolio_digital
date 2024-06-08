@@ -1,7 +1,6 @@
 {% macro Header(url)%}
 
 <div class="container">
-    <img src="{{ url_for('static', filename='imgs/logo.png') }}" class="logo rounded-full border-white">
     <nav class="menu fixed top-0 right-0 p-2">
         <ul>
         {% if url == '/' %}
