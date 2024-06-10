@@ -5,20 +5,33 @@
 {% endblock%}
 
 {% block body %}
-<body class="bg-gradient-to-r from-slate-950 via-slate-800 to-slate-950"></body>
-<div class="flex items-start justify-center p-6">
-    <h1 class="text-7xl md:text-8xl font-bold text-yellow-500 mb-12 mt-16">Projetos</h1>
-</div>
-    <div class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto my-10">
-        <h2 class="text-2xl font-bold mb-4 text-blue-950">Projetos Academicos</h2>
-        <p class="text-blue-950 mb-2">Aqui estão alguns dos meus projetos academicos.</p>
-        <a href="/projects/academic" class="text-blue-950">Ver Mais</a>
-      </div>
-
-    <div class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto my-10">
-        <h2 class="text-2xl font-bold mb-4 text-blue-950">Projetos Pessoais</h2>
-        <p class="text-blue-950 mb-2">Aqui estão alguns dos meus projetos pessoais.</p>
-        <a href="/projects/personal" class="text-blue-950">Ver Mais</a>
+<body class="bg-gradient-to-r from-slate-950 via-slate-800 to-slate-950">
+<h1 class="text-7xl text-center md:text-7xl font-bold text-gray-100 mb-2 mt-16 ml-6">Projetos Academicos</h1>
+<div class="flex items-start justify-center">
+    <div>
+        <img src="{{ url_for('static', filename='imgs/smartfarming.png')}}" alt="Imagem"
+        class="object-cover"/>
+        <h1 class="text-gray-100 text-2xl font-bold w-full text-center">Smarting-Farming</h1>
     </div>
+    <div>
+        <img src="{{ url_for('static', filename='imgs/meutimao.png')}}" alt="Imagem"
+        class="object-cover" />
+        <h1 class="text-gray-100 text-2xl font-bold w-full text-center">Meu Timão</h1>
+    </div>
+</div>
+<h1 class="text-7xl text-center md:text-7xl font-bold text-gray-100 mb-2 mt-16 ml-6">Projetos Pessoais</h1>
+<div class="flex items-start justify-center mb-32">
+    <div>
+        <img src="{{ url_for('static', filename='imgs/buscacep.png')}}" alt="Imagem"
+        class="object-cover"/>
+        <h1 class="text-gray-100 text-2xl font-bold w-full text-center">Buscador CEP</h1>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='imgs/todolist.png')}}" alt="Imagem"
+        class="object-cover" />
+        <h1 class="text-gray-100 text-2xl font-bold w-full text-center">Todo Avançado</h1>
+    </div>
+</div>
+{% include 'components/footer.html' %}
 <body>
 {% endblock%}
