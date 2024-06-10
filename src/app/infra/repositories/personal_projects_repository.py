@@ -1,4 +1,5 @@
 from core.entities.projects import Projects
+from core.commons import Error
 from infra.database import mysql
 
 class PersonalProjectsRepository:
@@ -23,6 +24,16 @@ class PersonalProjectsRepository:
             return self.__get_project_entity(row)
         
         return None
+
+    def get_icons_by_technologies(self, technologies):
+        try:
+            technologies_icons = []
+            for technologie in technologies:
+                    technologies_icons.append(f"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{technologie}/{technologie}-original.svg")
+        except Error as error:
+            raise error
+        
+        return technologies_icons
         
     def __get_project_entity(self,row):
         return Projects(id=row["id"], title=row["title"], content=row["content"], technologies=row["technologies"], link=row["link"])
