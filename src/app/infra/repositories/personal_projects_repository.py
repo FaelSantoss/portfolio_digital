@@ -9,7 +9,20 @@ class PersonalProjectsRepository:
         personal_projects = []
 
         for row in rows:
-            personal_projects.append(Projects(id=row["id"], title=row["title"], content=row["content"], technologies=row["technologies"], link=row["link"]))
+            personal_projects.append(self.__get_project_entity(row))
 
         return personal_projects
     
+    def get_personal_projects_by_title(self, title) -> Projects | None:
+        row = mysql.query(
+            sql="SELECT * FROM personal_project WHERE title = %s",
+            params=[title]
+        )
+
+        if row:
+            return self.__get_project_entity(row)
+        
+        return None
+        
+    def __get_project_entity(self,row):
+        return Projects(id=row["id"], title=row["title"], content=row["content"], technologies=row["technologies"], link=row["link"])
