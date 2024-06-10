@@ -28,6 +28,6 @@ def academic_projects():
     return render_template("projects/academic_projects.html")
 
 
-@projects_views.route("/projects/personal", methods=["GET"])
-def personal_projects():
+@projects_views.route("/projects/personal/<title>", methods=["GET"])
+def personal_projects(title):
     return personal_projects_view()
