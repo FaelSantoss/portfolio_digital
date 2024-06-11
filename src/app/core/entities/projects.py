@@ -7,3 +7,4 @@ class Projects(Entity):
     content: str = None
     technologies: str = None
     link: str = None
+    img: str = None
