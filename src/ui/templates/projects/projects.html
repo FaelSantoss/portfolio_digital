@@ -1,0 +1,29 @@
+{% extends "./index.html" %}
+{% block title %}
+<title>Projetos | Portfolio</title>
+{% endblock%}
+
+{% block body %}
+<body class="bg-gradient-to-r from-slate-950 via-slate-800 to-slate-950">
+<div class="flex items-start justify-center">
+
+    <div class="md:w-10/12">
+    <h1 class="text-7xl text-center md:text-7xl font-bold text-gray-100 mt-16">{{project.title}}</h1>
+    <div class="flex items-start justify-center">
+    <img src="{{ url_for('static', filename='imgs/') + project.img}}" alt="Imagem"
+        class="w-[65.1%] h-[65.1%] object-cover"/>
+    </div>
+    <p class="text-gray-100 text-2xl font-semibold w-full mb-16">{{project.content}}</p>
+    <p class="text-gray-100 text-5xl font-semibold w-full flex justify-center my-8">tecnologias utilizadas</p>
+    <div class="flex justify-center flex-nowrap">
+        <div class="flex place-items-center mb-4">
+            {% for technologie_icon in technologies_icons %}
+                <img src="{{ technologie_icon }}" class="w-20 h-20 mx-2">
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+{% include 'components/footer.html' %}
+</body>
+{% endblock%}
