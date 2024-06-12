@@ -1,6 +1,3 @@
-
-from core.commons import Error
-
 class ProjectsRepository: 
     def get_projects_by_title(self, title, data):
         for project in data:
@@ -14,7 +11,8 @@ class ProjectsRepository:
             technologies_icons = []
             for technologie in technologies:
                     technologies_icons.append(f"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{technologie}/{technologie}-original.svg")
-        except Error as error:
-            raise error
+
+            return technologies_icons
+        except:
+             return None
         
-        return technologies_icons
