@@ -1,41 +1,14 @@
 version: '3'
 
 services:
-  database:
-    image: 'bitnami/mysql:latest'
-    container_name: 'bd'
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
-      MYSQL_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
-      MYSQL_USER: ${MYSQL_DATABASE_USER}
-      MYSQL_DATABASE: ${MYSQL_DATABASE_NAME}
-    networks:
-     - app-tier
-    volumes:
-      - mysql_data:/bitnami/mysql/data
-    ports:
-      - 3306:3306
-    healthcheck:
-      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
   app:
     build: .
     container_name: 'portfolio'
     networks:
       - app-tier
     ports:
-      - 5002:5000
-    depends_on:
-      database:
-        condition: service_healthy
+      - 5000:5000
 
 networks:
  app-tier:
     driver: bridge
-  
-volumes:
-  mysql_data:
-    driver: local

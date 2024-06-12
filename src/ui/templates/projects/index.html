@@ -2,44 +2,32 @@
 
 {% block title %}
 <title>Projetos | Portfolio</title>
-{% endblock%}
+{% endblock %}
 
 {% block body %}
 <body class="bg-gradient-to-r from-slate-950 via-slate-800 to-slate-950">
-<h1 class="text-7xl text-center md:text-7xl font-bold text-gray-100 mb-2 mt-16 ml-6">Projetos Academicos</h1>
-<div class="flex items-start justify-center">
-    <div>
-        <a href="{{ projects_url[0] }}">
-            <img src="{{ url_for('static', filename='imgs/') + projects[0].img}}" alt="Imagem"
-            class="object-cover"/>
-            <h1 class="text-gray-100 text-2xl font-bold w-full text-center">{{projects[0].title}}</h1>
-        </a>
+    <h1 class="text-7xl text-center md:text-7xl font-bold text-gray-100 mb-2 mt-16 ml-6">Projetos Acadêmicos</h1>
+    <div class="flex items-start justify-center">
+        {% for project in projects[:2] %}
+            <div>
+                <a href="{{url + '/' + project['title']}}">
+                    <img src="{{ url_for('static', filename='imgs/' + project.img) }}" alt="Imagem" class="object-cover"/>
+                    <h1 class="text-gray-100 text-2xl font-bold w-full text-center">{{ project.title }}</h1>
+                </a>
+            </div>
+        {% endfor %}
     </div>
-    <div>
-        <a href="{{ projects_url[1] }}">
-            <img src="{{ url_for('static', filename='imgs/') + projects[1].img}}" alt="Imagem"
-            class="object-cover" />
-            <h1 class="text-gray-100 text-2xl font-bold w-full text-center">{{projects[1].title}}</h1>
-        </a>
+    <h1 class="text-7xl text-center md:text-7xl font-bold text-gray-100 mb-2 mt-16 ml-6">Projetos Pessoais</h1>
+    <div class="flex items-start justify-center">
+        {% for project in projects[2:] %}
+            <div>
+                <a href="{{url + '/' + project['title']}}">
+                    <img src="{{ url_for('static', filename='imgs/' + project.img) }}" alt="Imagem" class="object-cover"/>
+                    <h1 class="text-gray-100 text-2xl font-bold w-full text-center">{{ project.title }}</h1>
+                </a>
+            </div>
+        {% endfor %}
     </div>
-</div>
-<h1 class="text-7xl text-center md:text-7xl font-bold text-gray-100 mb-2 mt-16 ml-6">Projetos Pessoais</h1>
-<div class="flex items-start justify-center">
-    <div>
-        <a href="{{ projects_url[2] }}">
-            <img src="{{ url_for('static', filename='imgs/') + projects[2].img}}" alt="Imagem"
-            class="object-cover"/>
-            <h1 class="text-gray-100 text-2xl font-bold w-full text-center">{{projects[2].title}}</h1>
-        </a>
-    </div>
-    <div>
-        <a href="{{ projects_url[3] }}">
-            <img src="{{ url_for('static', filename='imgs/') + projects[3].img}}" alt="Imagem"
-            class="object-cover" />
-            <h1 class="text-gray-100 text-2xl font-bold w-full text-center">{{projects[3].title}}</h1>
-        </a>
-    </div>
-</div>
-{% include 'components/footer.html' %}
-<body>
-{% endblock%}
+    {% include 'components/footer.html' %}
+</body>
+{% endblock %}

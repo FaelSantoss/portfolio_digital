@@ -20,7 +20,6 @@ def about():
 
 @projects_views.route("/projects", methods=["GET"])
 def projects():
-
     return home_projects_view()
 
 @projects_views.route("/projects/<title>", methods=["GET"])
