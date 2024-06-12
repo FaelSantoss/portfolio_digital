@@ -2,7 +2,14 @@ body,
 html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 10px;
 }
 
 .logo {
@@ -18,4 +25,8 @@ html {
 .menu ul li a {
     color: #f7f9f9;
     text-decoration: none;
+}
+
+.word-break-all {
+  word-break: break-all;
 }
