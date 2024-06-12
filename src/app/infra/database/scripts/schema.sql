@@ -1,5 +1,8 @@
--- Active: 1716055461921@@127.0.0.1@3306@fael
-CREATE DATABASE IF NOT EXISTS `bla`;
+-- Active: 1718017191824@@127.0.0.1@3306@fael
+CREATE DATABASE IF NOT EXISTS `portifolio`;
+
+USE `portifolio`;
+
 CREATE TABLE IF NOT EXISTS projects (
     id CHAR(36) DEFAULT(UUID()) PRIMARY KEY NOT NULL,
     title VARCHAR(255),
@@ -11,16 +14,16 @@ CREATE TABLE IF NOT EXISTS projects (
 INSERT INTO projects (title, content, technologies, link, img)
 VALUES ('Smart-Farming',
         'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit distinctio vero dolorum ipsa quod maxime, minus, earum doloribus laborum nobis unde aliquam sequi incidunt natus beatae dolor debitis iure eius!',
-        'javascript,python3,flask,html5,css3,tailwind,docker,mysql',
-        'https://github.com/FaelSantoss/zip-code-finder',
+        'javascript,python,flask,html5,css3,tailwindcss,docker,mysql',
+        'https://github.com/CtrI-Alt-Del/smart-farming',
         'smartfarming.png'
          );
 
 INSERT INTO projects (title, content, technologies, link, img)
 VALUES ('Meu Timão',
         'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit distinctio vero dolorum ipsa quod maxime, minus, earum doloribus laborum nobis unde aliquam sequi incidunt natus beatae dolor debitis iure eius!',
-        'python3,flask,html5,css3,bootstrap,docker,mysql',
-        'https://github.com/FaelSantoss/zip-code-finder',
+        'python,flask,html5,css3,bootstrap,docker,mysql',
+        'https://github.com/FaelSantoss/challenge2_classPW',
         'meutimao.png'
          );
 
