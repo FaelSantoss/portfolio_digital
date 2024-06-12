@@ -10,7 +10,7 @@ services:
       MYSQL_USER: ${MYSQL_DATABASE_USER}
       MYSQL_DATABASE: ${MYSQL_DATABASE_NAME}
     networks:
-      - app-network
+     - app-tier
     volumes:
       - mysql_data:/bitnami/mysql/data
     ports:
@@ -21,10 +21,21 @@ services:
       timeout: 5s
       retries: 5
 
-networks:
-  app-network:
-    driver: bridge
+  app:
+    build: .
+    container_name: 'portfolio'
+    networks:
+      - app-tier
+    ports:
+      - 5002:5000
+    depends_on:
+      database:
+        condition: service_healthy
 
+networks:
+ app-tier:
+    driver: bridge
+  
 volumes:
   mysql_data:
     driver: local
