@@ -1,24 +1,23 @@
-{% macro Header(url)%}
-
-<div class="container">
-    <nav class="menu fixed top-0 right-0 p-2">
-        <ul>
-        {% if url == '/' %}
-        <li><a href="/"><p class="px-3 py-1 font-medium border-yellow-500 border-b-4">início</p></a></li>
-        <li><a href="/projects"><p class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">Projetos</p></a></li>
-        <li><a href="/about"><p class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">Sobre Mim</p></a></li>
-        {% endif %}
-        {% if '/projects' in url %}
-        <li><a href="/"><p class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">início</p></a></li>
-            <li><a href="/projects"><p class="px-3 py-1 font-medium border-yellow-500 border-b-4">Projetos</p></a></li>
-            <li><a href="/about"><p class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">Sobre Mim</p></a></li>
-        {% endif %}
-        {% if url == '/about' %}
-        <li><a href="/"><p class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">início</p></a></li>
-        <li><a href="/projects"><p class="px-3 py-1 font-medium hover:border-yellow-500 hover:border-b-4">Projetos</p></a></li>
-        <li><a href="/about"><p class="px-3 py-1 font-medium border-yellow-500 border-b-4">Sobre Mim</p></a></li>
-            {% endif %}
-        </ul>
-    </nav>
+{% macro Header(url) %}
+<div class="container mx-auto">
+  <nav class="menu fixed top-0 right-0 p-2 z-50 bg-transparent">
+    <ul class="flex space-x-4">
+      <li>
+        <a href="/" class="px-3 py-1 font-medium {{ 'border-yellow-500 border-b-4' if url == '/' else 'hover:border-yellow-500 hover:border-b-4' }}">
+          início
+        </a>
+      </li>
+      <li>
+        <a href="/projects" class="px-3 py-1 font-medium {{ 'border-yellow-500 border-b-4' if '/projects' in url else 'hover:border-yellow-500 hover:border-b-4' }}">
+          Projetos
+        </a>
+      </li>
+      <li>
+        <a href="/about" class="px-3 py-1 font-medium {{ 'border-yellow-500 border-b-4' if url == '/about' else 'hover:border-yellow-500 hover:border-b-4' }}">
+          Sobre Mim
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
-{%endmacro%}
+{% endmacro %}
