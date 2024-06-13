@@ -21,23 +21,23 @@
 
 <div>{{Header.Header(url)}}</div>
 {% block body %}
-  <body class="bg-gradient-to-r from-slate-950 via-slate-800 to-slate-950">
-    <div class="flex justify-center items-start min-h-screen w-full animate-fadeIn mt-8">
-      <div class="md:w-7/12">
-        <div class="flex flex-col items-start md:flex-row min-h-screen">
-          <div class="w-full md:w-1/2 mt-24">
-            <h1 class="text-yellow-500 text-2xl font-bold w-full">OLÁ</h1>
-            <p class="text-yellow-500 text-7xl md:text-8xl font-bold w-full">Eu sou</p>
-            <p class="text-gray-100 text-7xl md:text-8xl font-bold w-full">Rafael</p>
-            <p class="text-gray-100 text-7xl md:text-8xl font-bold w-full">dos Santos</p>
-            <p class="text-yellow-500 text-4xl font-semibold w-full">Desenvolvedor FullStack</p>
-          </div>
-          <img src="{{ url_for('static', filename='imgs/logo.png')}}" alt="Imagem"
-            class="w-[65.1%] h-[65.1%] object-cover md:ml-10" />
+<body class="bg-gradient-to-r from-slate-950 via-slate-800 to-slate-950">
+  <div class="flex justify-center items-start min-h-screen w-full animate-fadeIn mt-8 px-4">
+    <div class="md:w-7/12 w-full">
+      <div class="flex flex-col items-center md:items-start md:flex-row min-h-screen">
+        <div class="w-full md:w-1/2 mt-24 text-center md:text-left">
+          <h1 class="text-yellow-500 text-2xl font-bold">OLÁ</h1>
+          <p class="text-yellow-500 text-5xl md:text-6xl lg:text-7xl font-bold">Eu sou</p>
+          <p class="text-gray-100 text-5xl md:text-6xl lg:text-7xl font-bold">Rafael</p>
+          <p class="text-gray-100 text-5xl md:text-6xl lg:text-7xl font-bold">dos Santos</p>
+          <p class="text-yellow-500 text-2xl md:text-3xl lg:text-4xl font-semibold">Desenvolvedor FullStack</p>
         </div>
+        <img src="{{ url_for('static', filename='imgs/logo.png')}}" alt="Imagem" class="w-10/12 md:w-[65.1%] h-auto object-cover mt-10 md:mt-0 md:ml-10" />
       </div>
     </div>
-    </body>
+  </div>
+</body>
+
   {% endblock %}
 
 </html>
