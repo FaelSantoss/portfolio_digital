@@ -1,10 +1,38 @@
 {% macro Header(url) %}
-<div class="container mx-auto">
-  <nav class="menu fixed top-0 right-0 p-2 z-50 bg-transparent">
+<div class="container mx-auto flex justify-between items-center py-4">
+  <img src="{{ url_for('static', filename='imgs/rs.png') }}" class="logo">
+  
+  <button class="block md:hidden p-2 focus:outline-none" onclick="toggleMenu()">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+  
+  <nav class="menu hidden md:flex">
     <ul class="flex space-x-4">
       <li>
         <a href="/" class="px-3 py-1 font-medium {{ 'border-yellow-500 border-b-4' if url == '/' else 'hover:border-yellow-500 hover:border-b-4' }}">
-          início
+          Início
+        </a>
+      </li>
+      <li>
+        <a href="/projects" class="px-3 py-1 font-medium {{ 'border-yellow-500 border-b-4' if '/projects' in url else 'hover:border-yellow-500 hover:border-b-4' }}">
+          Projetos
+        </a>
+      </li>
+      <li>
+        <a href="/about" class="px-3 py-1 font-medium {{ 'border-yellow-500 border-b-4' if url == '/about' else 'hover:border-yellow-500 hover:border-b-4' }}">
+          Sobre Mim
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav id="mobileMenu" class="menu absolute top-16 right-0 w-full bg-slate-900 bg-opacity-50 hidden md:hidden">
+    <ul class="flex flex-col space-y-2 p-4">
+      <li>
+        <a href="/" class="px-3 py-1 font-medium {{ 'border-yellow-500 border-b-4' if url == '/' else 'hover:border-yellow-500 hover:border-b-4' }}">
+          Início
         </a>
       </li>
       <li>
@@ -20,4 +48,11 @@
     </ul>
   </nav>
 </div>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  }
+</script>
 {% endmacro %}
