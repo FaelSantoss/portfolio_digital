@@ -2,3 +2,4 @@
 node_modules
 src/ui/static/styles/output.css
 __pycache__/
+.vercel
