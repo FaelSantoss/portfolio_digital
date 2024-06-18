@@ -1,1 +1,0 @@
-from .projects_data import projects_data
