@@ -13,7 +13,7 @@
 </div>
 
 <p align="center">
-  <img src="./src/ui/static/imgs/logo.jpeg" width="50%" alt="Logo do Projeto">
+  <img src="./src/ui/static/imgs/logo.png" width="40%" alt="Logo do Projeto">
 </p>
 
 ## Tecnologias Utilizadas
