@@ -1,7 +1,5 @@
 <h1 align="center">Portfólio Digital de Rafael dos Santos</h1>
 
-<h2 align="center">Orientador: Fabrício Galende Marques de Carvalho</h2>
-
 <div align="center">
    <a href="https://github.com/FaelSantoss">
       <img alt="Feito por FaelSantoss" src="https://img.shields.io/badge/feito%20por-FaelSantoss-skyblue">
