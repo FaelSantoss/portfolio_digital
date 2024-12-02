@@ -10,6 +10,13 @@ projects_data = [
         "img": "smartfarming.png",
     },
     {
+        "title": "Stocker",
+        "content": "Desenvolvemos uma aplicação web para gerenciamento de estoque com diversas funcionalidades, incluindo dashboard para análise de dados, controle de entrada e saída de estoque, notificações automáticas de estoque baixo, e muito mais. Minhas contribuições incluíram a contribuição para a modelagem do banco de dados e o desenvolvimento de partes essenciais do sistema, como categorias, localização, empresas, usuários, login e registro, e listagem de produtos. O projeto utiliza Clean Architecture para garantir escalabilidade e organização do código.",
+        "technologies": "typescript,react,nodejs,nextjs,fastify,prisma,supabase,tailwindcss", 
+        "link": "https://github.com/CtrI-Alt-Del/stocker",
+        "img": "smartfarming.png",
+    },
+    {
         "title": "Meu-Timao",
         "content": "Desenvolvi o site 'Meu Timao', onde os usuários podem adicionar notícias que são exibidas em forma de cards. Cada card possui um botão que gera uma rota dinâmica para uma página específica no banco de dados. A interface inclui um carrossel com as três últimas notícias, utilizando componentes do Bootstrap.",
         "technologies": "python,flask,html5,css3,bootstrap,docker,mysql",
